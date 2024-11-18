@@ -1,79 +1,73 @@
-import React from 'react'; 
+import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-
-const skills = [
-  { name: 'HTML5', icon: 'https://img.icons8.com/color/48/000000/html-5--v1.png' },
-  { name: 'CSS3', icon: 'https://img.icons8.com/color/48/000000/css3.png' },
-  { name: 'JavaScript', icon: 'https://img.icons8.com/color/48/000000/javascript--v1.png' },
-  { name: 'React', icon: 'https://img.icons8.com/office/48/000000/react.png' },
-  { name: 'Firebase', icon: 'https://img.icons8.com/color/48/000000/firebase.png' },
-  { name: 'MySQL', icon: 'https://img.icons8.com/color/48/000000/mysql-logo.png' },
-  { name: 'Python', icon: 'https://img.icons8.com/color/48/000000/python.png' },
-  { name: 'Java', icon: 'https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png' },
-  { name: 'PHP', icon: 'https://img.icons8.com/color/48/000000/php.png' },
-];
+import skills from '../data/Skills';
 
 function Skills() {
   return (
-    <Box sx={{ my: 4, marginTop: '10%' }}>
-      <Typography 
-        variant="h4" 
-        gutterBottom 
-        align="center" 
-        sx={{ color: '#FFD700', marginBottom: '3%' }}
+    <Box sx={{ my: 4, mt: { xs: 4, md: '10%' } }}>
+      <Typography
+        variant="h4"
+        gutterBottom
+        align="center"
+        sx={{
+          color: '#FFD700',
+          mb: 3,
+        }}
       >
         Habilidades 🧑‍💻
       </Typography>
-      <Grid 
-        container 
-        spacing={5} // Más espacio entre columnas y filas 
-        justifyContent="center" 
-        sx={{ marginTop: '3%' }}
+      <Grid
+        container
+        spacing={3} // Espaciado uniforme
+        justifyContent="center"
       >
         {skills.map((skill, index) => (
-          <Grid 
-            item 
-            key={index} 
-            xs={6} 
-            sm={4} 
-            md={2} 
-            sx={{
-              textAlign: 'center',
-              bgcolor: '#1a1a1a',
-              padding: 2, // Espaciado interno
-              margin: 1, // Espaciado externo
-              borderRadius: '8px',
-              boxShadow: 3,
-              display: 'flex',
-              flexDirection: 'column', // Asegura que icono y texto estén en columna
-              alignItems: 'center', // Centra horizontalmente
-              justifyContent: 'center', // Centra verticalmente
-              height: '150px', // Ajustar altura uniforme
-              transition: 'transform 0.2s',
-              '&:hover': {
-                transform: 'scale(1.1)',
-                bgcolor: '#E6BE00',
-              },
-            }}
+          <Grid
+            item
+            key={index}
+            xs={6} // 2 columnas en pantallas pequeñas
+            sm={6} // Mantiene 2 columnas en pantallas medianas
+            md={3} // 4 columnas en pantallas grandes
+            lg={2} // Más columnas en pantallas extra grandes
           >
-            <Box sx={{ mb: 2 }}> {/* Contenedor para espaciar ícono */}
-              <img 
-                src={skill.icon} 
-                alt={skill.name} 
-                width={48} 
-                style={{ display: 'block' }} 
-              />
-            </Box>
-            <Typography 
+            <Box
               sx={{
-                color: '#FFD700',
-                fontWeight: 'bold',
-                transition: 'color 0.2s',
-                '&:hover': { color: '#FF0000' },
+                textAlign: 'center',
+                bgcolor: '#1a1a1a',
+                p: 2, // Espaciado interno
+                borderRadius: '8px',
+                boxShadow: 3,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: 150,
+                transition: 'transform 0.3s, background-color 0.3s',
+                '&:hover': {
+                  transform: 'scale(1.1)',
+                  bgcolor: '#E6BE00',
+                },
               }}
             >
-              {skill.name}
-            </Typography>
+              <Box sx={{ mb: 2 }}>
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  width={48}
+                  style={{ display: 'block' }}
+                />
+              </Box>
+              <Typography
+                sx={{
+                  color: '#FFD700',
+                  fontWeight: 'bold',
+                  transition: 'color 0.3s',
+                  '&:hover': { color: '#FF0000' },
+                }}
+              >
+                {skill.name}
+              </Typography>
+            </Box>
           </Grid>
         ))}
       </Grid>
