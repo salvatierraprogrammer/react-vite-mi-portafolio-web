@@ -21,7 +21,7 @@ const projects = [
     img: 'https://firebasestorage.googleapis.com/v0/b/donacionescomunidad-4ff32.appspot.com/o/misCompras.PNG?alt=media&token=d1961585-1bee-49bc-9579-ed6e0a3c91b6',
     description: 'Aplicación web para realizar cálculos rápidos en compras con interfaz moderna.',
     demo: 'https://mis-compras-calculo.netlify.app/',
-    code: 'https://github.com/SalvatierraDev/misCompras',
+    code: 'https://github.com/SalvatierraDev/react-vite-firebase-mis-compras',
   },
   {
     name: 'React + TypeScript + Vite + Firebase - Comunidad CS 1.6',
