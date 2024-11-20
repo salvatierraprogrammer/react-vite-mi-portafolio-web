@@ -32,9 +32,9 @@ function About() {
           color: '#fff', // Texto principal en blanco
         }}
       >
-        Actualmente trabajo como Freelancer en desarrollo móvil y backend, especializado en React y maquetado. 
+        Actualmente trabajo como Freelancer en desarrollo móvil y web FullStack. 
         Estudiante de Ingeniería en Informática en UNDAV y en búsqueda activa de oportunidades como 
-        Desarrollador Backend Junior. Vivo en Buenos Aires, Argentina.
+        Programdor Backend Junior. Vivo en Buenos Aires, Argentina.
       </Typography>
       <Typography
         sx={{

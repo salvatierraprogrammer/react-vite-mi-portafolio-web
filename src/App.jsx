@@ -11,7 +11,6 @@ function App() {
   return (
     <Container maxWidth="lg">
       <Header />
-      
       <About />
       <Skills />
       <Projects />

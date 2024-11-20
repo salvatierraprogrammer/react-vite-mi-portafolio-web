@@ -44,7 +44,7 @@ function Header() {
                 Diego Salvatierra
               </Typography>
               <Typography variant="subtitle2" sx={{ color: '#B0B0B0' }}>
-                Desarrollador Web & Móvil
+                Programador Web & Móvil
               </Typography>
             </Box>
           </Box>

@@ -4,15 +4,15 @@ import { Box, Typography, Grid, Card, CardContent, CardMedia, Stack, Button } fr
 const entrepreneurships = [
   {
     name: 'Freelancer',
-    description: 'Servicios de desarrollo web y móvil.',
-    img: 'https://scontent.ffdo24-3.fna.fbcdn.net/v/t39.30808-6/466630893_1078644860520148_13597451172605879_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeERAN49B0X_um5HIy7uahaA6KJxiuPfmsfoonGK49-ax-vlUprZwVoUp-ker_D9c-3ZsNZwJIESf0Qi7vGDehIi&_nc_ohc=uUUzuW99ED0Q7kNvgGkOK2S&_nc_zt=23&_nc_ht=scontent.ffdo24-3.fna&_nc_gid=AxzEEMaHeHi-EaBXbzdfDp6&oh=00_AYAnXIZ40WJj8H7Lq67me9kxAxh0IP83vCgzo2G2NaJVCQ&oe=673D1F23',
+    description: 'Servicios de programacion web y móvil, venta de codigo',
+    img: 'https://scontent.ffdo24-3.fna.fbcdn.net/v/t39.30808-6/466630893_1078644860520148_13597451172605879_n.jpg?stp=dst-jpg_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=bO_GX35KnLMQ7kNvgEOHWI2&_nc_zt=23&_nc_ht=scontent.ffdo24-3.fna&_nc_gid=AEglU6mcfTehf4FWjvbUfEz&oh=00_AYD_utBdGHOh-W9AfR9sUUaAdM_zo4QtSviWQOnRnwXJaQ&oe=6743B6A3',
     link: 'https://github.com/SalvatierraDev',
   },
   {
     name: 'El Canal del Acompañante Terapéutico',
     description: 'Plataforma de apoyo para terapeutas y pacientes.',
-    img: 'https://via.placeholder.com/600x400?text=El+Canal+del+Acompañante+Terapéutico', // Placeholder
-    link: 'https://terapeutas.com',
+    img: 'https://scontent.faep24-1.fna.fbcdn.net/v/t39.30808-6/355135907_299780372386688_3567768664697909382_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=-IRpyXDbdZUQ7kNvgHsfrIR&_nc_zt=23&_nc_ht=scontent.faep24-1.fna&_nc_gid=AQAXHZKnpm8Lw_YTrJQ5E2x&oh=00_AYC0zrMFotk2QPbJfmdgq4uC0A_N4_XjRKeb1lEUdR8MLg&oe=6743CEC2', // Placeholder
+    link: 'https://www.facebook.com/ElCanalDelAT/',
   },
 ];
 
