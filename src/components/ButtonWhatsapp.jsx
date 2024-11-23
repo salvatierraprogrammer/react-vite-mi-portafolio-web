@@ -7,7 +7,7 @@ const ButtonWhatsapp = () => {
   const whatsappNumber = "+5491131034391";
 
   const reservarCita = () => {
-    const mensaje = `👋 ¡Hola! Estoy interesado/a en más de tus servicios. ¿Podrías brindarme más información? Gracias 😊`;
+    const mensaje = `👋 ¡Hola! Estoy interesado/a en mas de tus servicios. ¿Podrías brindarme más información? Gracias 😊`;
     const mensajeCodificado = encodeURIComponent(mensaje);
     const urlWhatsApp = `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${mensajeCodificado}`;
     window.open(urlWhatsApp, "_blank");
@@ -30,15 +30,12 @@ const ButtonWhatsapp = () => {
         <Box
           sx={{
             position: 'fixed',
-            bottom: { xs: '100px', sm: '140px' },
-            left: '50%', // Centrado horizontal
-            transform: 'translateX(-50%)', // Centrado exacto
-            width: '90%',
-            maxWidth: '320px', // Ancho máximo para pantallas grandes
-            boxSizing: 'border-box', // Incluye padding y bordes en el ancho
+            bottom: '140px',
+            right: '20px',
+            width: { xs: '75%', sm: '320px' }, // Adaptable para móviles y pantallas grandes
             bgcolor: '#1a1a1a', // Fondo oscuro
             color: 'white',
-            p: { xs: 2, sm: 4 },
+            p: 4,
             borderRadius: 3,
             boxShadow: 24,
             textAlign: 'center',
@@ -60,7 +57,6 @@ const ButtonWhatsapp = () => {
           >
             <CloseIcon />
           </IconButton>
-
           {/* Contenido del modal */}
           <Typography
             variant="h6"
@@ -68,7 +64,6 @@ const ButtonWhatsapp = () => {
               fontWeight: 'bold',
               color: '#FFD700',
               mb: 2,
-              fontSize: { xs: '1rem', sm: '1.2rem' },
             }}
           >
             💬 ¡Consulta por tu proyecto!
@@ -91,20 +86,18 @@ const ButtonWhatsapp = () => {
             variant="contained"
             sx={{
               mt: 2,
-              px: { xs: 2, sm: 3 },
+              px: 3,
               py: 1.5,
               bgcolor: '#25D366', // Verde WhatsApp
               color: '#fff',
               fontWeight: 'bold',
               textTransform: 'none',
-              fontSize: { xs: '0.9rem', sm: '1rem' },
               '&:hover': {
                 bgcolor: '#128C7E',
               },
             }}
           >
-            <WhatsAppIcon sx={{ mr: 1, fontSize: { xs: '1.5rem', sm: '2rem' } }} />
-            Enviar Mensaje
+            <WhatsAppIcon sx={{ mr: 1 }} /> Enviar Mensaje
           </Button>
         </Box>
       </Modal>
@@ -115,8 +108,8 @@ const ButtonWhatsapp = () => {
         onClick={reservarCita}
         sx={{
           position: 'fixed',
-          bottom: { xs: '60px', sm: '80px' },
-          right: { xs: '10px', sm: '20px' },
+          bottom: '80px',
+          right: '20px',
           backgroundColor: '#25D366', // Verde WhatsApp
           color: 'white',
           zIndex: 1000,
@@ -125,7 +118,7 @@ const ButtonWhatsapp = () => {
           },
         }}
       >
-        <WhatsAppIcon sx={{ fontSize: { xs: '2rem', sm: '2.5rem' } }} />
+        <WhatsAppIcon sx={{ fontSize: '2.5rem' }} />
       </Fab>
     </>
   );
