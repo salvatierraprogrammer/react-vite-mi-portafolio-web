@@ -148,7 +148,7 @@ function Entrepreneurships() {
                       }}
                       onClick={() => alert('Detalles para transferencia bancaria serán enviados por correo.')}
                     >
-                      Transferencia Bancaria
+                      💳
                     </Button>
                     <Button
                       variant="outlined"
