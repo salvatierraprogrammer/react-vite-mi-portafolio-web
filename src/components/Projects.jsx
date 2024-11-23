@@ -9,7 +9,7 @@ const projects = [
     name: 'React + Vite + Material-UI - Peinados a Domicilio (Web)',
     img: peinado,
     description: 'Plataforma web para contratar servicios de peinados a domicilio. Incluye un diseño atractivo y un sistema de reservas eficiente para clientes.',
-    demo: 'https://peinadosfrontend.netlify.app/',
+    demo: 'https://frontendestetica-peinados.netlify.app/',
     code: '#',
     price: '$150.000 Arg',
   },
