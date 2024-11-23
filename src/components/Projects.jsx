@@ -1,42 +1,51 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button, Stack } from '@mui/material';
+import profesor from '../assets/profesor.png';
+import peinado from '../assets/peinado.png';
+import menu from '../assets/menu.png';
 
 const projects = [
   {
-    name: 'React Native Expo + Firebase - Agenda de Notas',
-    img: 'https://firebasestorage.googleapis.com/v0/b/react-firebase-e0cf3.appspot.com/o/Captura%20de%20pantalla%202024-10-02%20202110.png?alt=media&token=f3b026e0-3709-471d-8dc5-1be9085455d1',
-    description: 'Una aplicación móvil para crear, editar y organizar notas de manera intuitiva.',
-    apk: 'https://drive.google.com/file/d/1wHhdyxg7hveNjwPy9qwIMTEFSM5FPNu-/view?usp=sharing',
-    pdf: 'https://drive.google.com/file/d/1miIAP4qkDpUQeLL99A9Eh5mxv8G7Dvej/view?usp=sharing',
-  },
-  {
-    name: 'React Native Expo + Firebase - Cálculo de Compras',
-    img: 'https://firebasestorage.googleapis.com/v0/b/react-firebase-e0cf3.appspot.com/o/Google%20Pixel%204%20XL%20Presentation.png?alt=media&token=8eb903bb-f9df-4fc9-b71d-1a033855931b',
-    description: 'Una herramienta para calcular y gestionar compras personales o grupales.',
-    apk: 'https://drive.google.com/file/d/1sSEXt5JWVBSrkVzcKSn5v8nVO6C6xi66/view?usp=sharing',
-    pdf: 'https://drive.google.com/file/d/1nbBHqSKm4PHVg8UxABweilFKFIUSGvZv/view?usp=sharing',
-  },
-  {
-    name: 'React + TypeScript + Vite + Firebase - Cálculo de Compras',
-    img: 'https://firebasestorage.googleapis.com/v0/b/donacionescomunidad-4ff32.appspot.com/o/misCompras.PNG?alt=media&token=d1961585-1bee-49bc-9579-ed6e0a3c91b6',
-    description: 'Aplicación web para realizar cálculos rápidos en compras con interfaz moderna.',
-    demo: 'https://mis-compras-calculo.netlify.app/',
-    code: 'https://github.com/SalvatierraDev/react-vite-firebase-mis-compras',
-  },
-  {
-    name: 'React + TypeScript + Vite + Firebase - Comunidad CS 1.6',
-    img: 'https://firebasestorage.googleapis.com/v0/b/donacionescomunidad-4ff32.appspot.com/o/comunidadCS16.PNG?alt=media&token=03c05275-d4c9-4b51-a5a8-b8c7ad1dc382',
-    description: 'Portal para gestionar y compartir recursos relacionados con el juego CS 1.6.',
-    demo: 'https://baquitacomunidadcs.netlify.app/',
+    name: 'React + Vite + Material-UI - Peinados a Domicilio (Web)',
+    img: peinado,
+    description: 'Plataforma web para contratar servicios de peinados a domicilio. Incluye un diseño atractivo y un sistema de reservas eficiente para clientes.',
+    demo: 'https://peinadosfrontend.netlify.app/',
     code: '#',
+    price: '$150.000 Arg',
+  },
+  {
+    name: 'React + Vite + Material-UI - Profesor de Matemáticas Online (Web)',
+    img: profesor,
+    description: 'Sitio web diseñado para conectar profesores de matemáticas con estudiantes de manera remota. Incluye un sistema de contacto y detalles sobre los servicios ofrecidos.',
+    demo: 'https://profesoramatematicas.netlify.app/',
+    code: '#',
+    price: '$150.000 Arg',
+  },
+  {
+    name: 'React + Vite + Material-UI - Menú Digital (Web)',
+    img: menu,
+    description: 'Aplicación web para restaurantes que permite gestionar un menú digital interactivo. Ideal para mejorar la experiencia del cliente y optimizar el manejo de pedidos.',
+    demo: 'https://pizzeria-frontend.netlify.app/',
+    code: '#',
+    price: '$150.000 Arg',
   },
 ];
 
 function Projects() {
-  return (      
+  const whatsappNumber = "+5491131034391";
+
+  // Función para enviar un mensaje de WhatsApp relacionado con el proyecto
+  const comprarProyecto = (projectName, projectPrice) => {
+    const mensaje = `👋 ¡Hola! Estoy interesado/a en comprar el proyecto "${projectName}" por ${projectPrice}. ¿Podrías brindarme más información? Gracias 😊`;
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const urlWhatsApp = `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${mensajeCodificado}`;
+    window.open(urlWhatsApp, "_blank");
+  };
+
+  return (
     <Box sx={{ my: 4 }}>
-      <Typography variant="h4" gutterBottom align="center" sx={{ mb: 3, color: '#FFD700', marginTop:'5%' }}>
-        Proyectos
+      <Typography variant="h4" gutterBottom align="center" sx={{ mb: 3, color: '#FFD700', marginTop: '5%' }}>
+        Codigo en Venta
       </Typography>
       <Grid container spacing={4}>
         {projects.map((project, index) => (
@@ -66,63 +75,41 @@ function Projects() {
                 <Typography variant="body2" color="#B0B0B0" sx={{ mb: 2 }}>
                   {project.description}
                 </Typography>
-                <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mt: 1 }}>
-                  {project.apk && (
+                <Typography variant="subtitle1" sx={{ mb: 2, color: '#FFD700', fontWeight: 'bold' }}>
+                  Precio: {project.price}
+                </Typography>
+                <Stack
+                  direction="row"
+                  spacing={1}
+                  justifyContent="center"
+                  alignItems="center"
+                  sx={{ mt: 1, flexWrap: 'wrap' }}
+                >
+                  {project.demo && (
                     <Button
-                      href={project.apk}
-                      target="_blank"
-                      variant="contained"
-                      sx={{
-                        bgcolor: '#FFD700',
-                        color: '#1a1a1a',
-                        '&:hover': { bgcolor: '#E6BE00' },
-                      }}
-                    >
-                      Descargar APK
-                    </Button>
-                  )}
-                  {project.pdf && (
-                    <Button
-                      href={project.pdf}
+                      href={project.demo}
                       target="_blank"
                       variant="outlined"
                       sx={{
                         borderColor: '#FFD700',
                         color: '#FFD700',
                         '&:hover': { bgcolor: '#E6BE00', color: '#1a1a1a' },
-                      }}
-                    >
-                      Ver PDF
-                    </Button>
-                  )}
-                  {project.demo && (
-                    <Button
-                      href={project.demo}
-                      target="_blank"
-                      variant="contained"
-                      sx={{
-                        bgcolor: '#FFD700',
-                        color: '#1a1a1a',
-                        '&:hover': { bgcolor: '#E6BE00' },
                       }}
                     >
                       Ver Demo
                     </Button>
                   )}
-                  {project.code && (
-                    <Button
-                      href={project.code}
-                      target="_blank"
-                      variant="outlined"
-                      sx={{
-                        borderColor: '#FFD700',
-                        color: '#FFD700',
-                        '&:hover': { bgcolor: '#E6BE00', color: '#1a1a1a' },
-                      }}
-                    >
-                      Ver Código
-                    </Button>
-                  )}
+                  <Button
+                    onClick={() => comprarProyecto(project.name, project.price)}
+                    variant="contained"
+                    sx={{
+                      bgcolor: '#E63946', // Rojo vibrante que contrasta con el fondo oscuro
+                      color: '#fff',
+                      '&:hover': { bgcolor: '#D62839' }, // Rojo oscuro al pasar el cursor
+                    }}
+                  >
+                    Comprar Ahora
+                  </Button>
                 </Stack>
               </CardContent>
             </Card>

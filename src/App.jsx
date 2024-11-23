@@ -5,16 +5,28 @@ import Footer from './layout/Footer';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Projects2 from './components/Projects2';
 import Entrepreneurships from './components/Entrepreneurships';
+import ButtonWhatsapp from './components/ButtonWhatsapp';
+import ButtonRedes from './components/ButtonRedes';
 
 function App() {
   return (
     <Container maxWidth="lg">
       <Header />
+      <ButtonWhatsapp />
+      <ButtonRedes />
       <About />
       <Skills />
-      <Projects />
-      <Entrepreneurships />
+      {/* Sección de Proyecto */}
+      <div id="proyecto">
+        <Projects />
+        <Projects2 />
+      </div>
+      {/* Sección de Emprendimiento */}
+      <div id="emprendimiento">
+        <Entrepreneurships />
+      </div>
       <Footer />
     </Container>
   );

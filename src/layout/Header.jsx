@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Avatar, Box, IconButton, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import perfile from '../assets/perfile.jpeg';
+import perfile from '../assets/perfile.jpeg'; // Asegúrate de que la ruta sea correcta
 
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  // Función para abrir y cerrar el Drawer
   const toggleDrawer = (open) => (event) => {
+    // Evita cerrar con Tab o Shift
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
@@ -14,34 +16,25 @@ function Header() {
   };
 
   const menuItems = [
-    { text: 'Proyecto', link: '#proyecto' },
-    { text: 'Emprendimiento', link: '#emprendimiento' },
+    { text: 'Inicio', link: '#' },
+    { text: 'Venta de codigo', link: '#proyecto' },
+    { text: 'Servicios', link: '#emprendimiento' },
   ];
 
   return (
     <>
-      <AppBar
-        // position="sticky"
-        sx={{
-          bgcolor: '#242424',
-          color: '#FFD700',
-        }}
-      >
+      <AppBar sx={{ bgcolor: '#242424', color: '#FFD700' }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           {/* Avatar e información */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Avatar
-              alt="Diego Salvatierra"
+              alt="Salvatierra Dev"
               src={perfile}
-              sx={{
-                width: 48,
-                height: 48,
-                marginRight: 2,
-              }}
+              sx={{ width: 48, height: 48, marginRight: 2 }}
             />
             <Box>
               <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Diego Salvatierra
+                Salvatierra Dev
               </Typography>
               <Typography variant="subtitle2" sx={{ color: '#B0B0B0' }}>
                 Programador Web & Móvil
@@ -49,7 +42,7 @@ function Header() {
             </Box>
           </Box>
 
-          {/* Botón de menú responsivo */}
+          {/* Icono para abrir el menú */}
           <IconButton
             sx={{ color: '#FFD700' }}
             edge="end"
