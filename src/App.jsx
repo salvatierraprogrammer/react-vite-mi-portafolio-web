@@ -17,12 +17,13 @@ function App() {
       <ButtonWhatsapp />
       <ButtonRedes />
       <About />
-      <Skills />
       {/* Sección de Proyecto */}
       <div id="proyecto">
         <Projects />
         <Projects2 />
       </div>
+      <Skills />
+      
       {/* Sección de Emprendimiento */}
       <div id="emprendimiento">
         <Entrepreneurships />
