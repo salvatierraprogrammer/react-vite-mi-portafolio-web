@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button, Stack } from '@mui/material';
 import apkabordando from '../assets/apkabordando.png';
-import libro from '../assets/libro.PNG';
+import libro from '../assets/libro.png';
 const projects = [
   {
     name: 'React Native Expo + Firebase - Agendar Pacientes',
