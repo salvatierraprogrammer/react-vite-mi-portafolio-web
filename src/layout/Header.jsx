@@ -17,7 +17,7 @@ function Header() {
 
   const menuItems = [
     { text: 'Inicio', link: '#' },
-    { text: 'Venta de codigo', link: '#proyecto' },
+    { text: 'Mis proyectos', link: '#proyecto' },
     { text: 'Servicios', link: '#emprendimiento' },
   ];
 
